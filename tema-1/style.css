@@ -1,0 +1,19 @@
+    header, nav, article, aside, footer {
+      background: yellow;
+      text-align: center;
+      margin: 0.5%;
+      padding: 30px;
+      }
+      
+      nav, aside {
+      width: 22%;
+      }
+      
+      article {
+      width: 42.7%;
+      }
+      
+      nav, article, aside {
+      	display: inline-block;
+      height: 250px;
+      }
