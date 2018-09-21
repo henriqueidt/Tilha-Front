@@ -4,6 +4,10 @@
 	font-family: Arial;
 }
 
+a {
+	text-decoration: none;
+}
+
 header {
 	background: #fff;
 	height: 45px;
@@ -25,6 +29,7 @@ header {
 }
 
 .div-para-flex div {
+	color: #8c8c8c;
 	margin: 12px;
 	display: flex;
 	align-items: center;
@@ -61,15 +66,19 @@ nav li{
 	justify-content: space-around;
 }
 
+
+
 .followbutton {
 	color: #0077B5;
 	font-size: 12pt;
+	height: 33px;
 	display: flex;
 	align-items: center;
 	border-radius: 25px;
-	border: 2px solid #0077b5;
+	border: 1px solid #0077b5;
 	padding: 0px 27px;
 	margin-right: 80px;
+	margin-top: 10px;
 }
 
 .numbers li {
@@ -97,6 +106,10 @@ figure {
 
 .info {
 	margin-top: 25px;
+	font-size: 11pt;
+}
+.info a {
+	color: #0077b5;
 }
 
 .gallery {
@@ -128,7 +141,7 @@ figure {
 	padding: 5px 5px;
 }
 
-.main li, {
+.main li {
 	padding: 10px 10px ;
 }
 
@@ -168,18 +181,21 @@ figure {
 	height: 150px;
 	border-bottom: 14px solid #E5F2F7; 
 }
+.box1 p {
+	color: grey;
+}
 
 .signup {
 	background: #0077b5;
 	color: white;
 	font-weight: bold;
-	padding: 15px 30px;
+	padding: 18px 30px;
 	text-align: center;
 	cursor: pointer;
 	width: 220px;
 	border-radius: 30px;
 	margin-left: 10px;
-	margin-top: 10px;
+	margin-top: 12px;
 }
 
 .badge {
