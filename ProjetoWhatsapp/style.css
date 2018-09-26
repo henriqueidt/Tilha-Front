@@ -4,6 +4,10 @@
   font-family: Arial;
 }
 
+body {
+  background: green;
+}
+
 .useful {
   margin: 0 auto;
   margin-top: 20px;
@@ -43,6 +47,63 @@
   border-radius: 300px;
   width: 40px;
   height: 40px;
+}
+
+.conversations-search-bar {
+  height: 50px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-contact {
+  width: 90%;
+  height: 60%;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: grey;
+  padding-left: 10px;
+}
+
+.contacts {
+  list-style-type: none;
+  background: white;
+  height: 840px;
+}
+
+.contacts li {
+  padding: 11px;
+  display: flex;
+  border-bottom: 1px solid #cccccc;
+}
+
+.contact-photo {
+  border-radius: 300px;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.list-name-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.list-message {
+  color: grey;
+  font-size: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.ticks {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
 }
 
 .name1 {
