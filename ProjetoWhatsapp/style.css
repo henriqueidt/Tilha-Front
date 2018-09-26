@@ -22,7 +22,7 @@
   width: 70%;
 }
 
-.conversation-header {
+.conversation-header, .conversations-list-header {
   height: 60px;
   background: #e6e6e6;
   display: flex;
@@ -30,7 +30,11 @@
   justify-content: space-between;
 }
 
-.contact {
+.conversations-list-header {
+  border-right: 1px solid #cccccc
+}
+
+.contact, #my-photo{
   display: flex;
   margin: 20px;
 }
