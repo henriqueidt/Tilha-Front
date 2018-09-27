@@ -148,6 +148,32 @@ body {
 
 .conversation-talking {
   height: 830px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.received-line {
+  width: 900px;
+}
+
+.received-line p {
+  background: white;
+  max-width: 500px; 
+  border-radius: 6px;
+  margin-left: 100px;
+  padding: 7px;
+  margin-bottom: 2px;
+}
+
+.sent-line p {
+  border-radius: 6px;
+  padding: 7px;
+  background: #d9ffcc;
+  max-width: 500px;
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 2px;
 }
 
 .conversation-footer {
