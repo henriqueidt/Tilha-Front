@@ -4,6 +4,10 @@
   font-family: Arial;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background: green;
 }
@@ -70,7 +74,7 @@ body {
   list-style-type: none;
   background: white;
   height: 840px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 
@@ -78,6 +82,14 @@ body {
   padding: 11px;
   display: flex;
   border-bottom: 1px solid #cccccc;
+}
+
+.contacts li:hover {
+  background: #f0f5f5;
+}
+
+.contacts li:visited {
+  background: black;
 }
 
 .contact-photo {
@@ -92,9 +104,14 @@ body {
   flex-direction: row;
 }
 
+.name-time p {
+  color: black;
+}
+
 .time {
   margin-left: 170px;
-  font-size: 80%;
+  font-size: 73%;
+  color: grey;
 }
 
 .information {
@@ -117,6 +134,12 @@ body {
 
 }
 
+.list-message i {
+  margin-right: 5px;
+  font-size: 15px;
+  margin-left: 0px;
+}
+
 .ticks {
   width: 17px;
   height: 17px;
@@ -134,10 +157,10 @@ body {
   margin-right: 5px;
 }
 
-.icons img {
-  width: 17px;
-  height: 17px;
-  margin: 14px;
+i {
+  font-size: 17px;
+  color: grey;
+  margin: 15px;
 }
 
 .conversation-body {
@@ -150,48 +173,55 @@ body {
   height: 830px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .received-line {
   width: 900px;
 }
 
-.received-line p {
+.received-time {
   background: white;
   max-width: 500px; 
   border-radius: 6px;
   margin-left: 100px;
   padding: 7px;
   margin-bottom: 2px;
+  display: flex;
 }
 
-.sent-line p {
+.time-of-message {
+  font-size: 70%;
+  justify-content: flex-end;
+  align-self: flex-end;
+  color: grey;
+}
+
+.sent-time {
   border-radius: 6px;
   padding: 7px;
   background: #d9ffcc;
   max-width: 500px;
   float: right;
+  display: flex;
   margin-right: 100px;
   margin-bottom: 2px;
 }
 
 .conversation-footer {
-  background: white;
+  background: #e5ddd5;
   justify-content: space-around;
-  opacity: 0.6;
 }
 
-.conversation-footer img {
-  width: 25px;
-  height: 25px;
-  margin: 14px;
+.conversation-footer i {
+  font-size: 25px;
+  margin: 17px;
 }
 
 .message-to-send {
   width: 800px;
   height: 40px;
   background: white;
-  border: 1px solid grey;
+  border: 0px;
   border-radius: 200px;
 }
