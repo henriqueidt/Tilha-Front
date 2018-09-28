@@ -53,6 +53,28 @@ body {
   height: 40px;
 }
 
+.tab-selector {
+  background: white;
+  display: flex;
+  border-radius: 2px;
+}
+
+.tab-selector:hover{
+  cursor: pointer;
+}
+
+.tab-selector > div:hover {
+  background: #b2e1e6;
+}
+
+.tab1-button, .tab2-button {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  background: #f0f5f5;
+  border: 1px solid #d0e1e1;
+}
+
 #conversations-search-bar {
   height: 50px;
   background: white;
@@ -73,12 +95,13 @@ body {
 .contacts {
   list-style-type: none;
   background: white;
-  height: 840px;
+  height: 821px;
   overflow-y: scroll;
 }
 
 
 .contacts li {
+  height: 60px;
   padding: 11px;
   display: flex;
   border-bottom: 1px solid #cccccc;
@@ -86,6 +109,7 @@ body {
 
 .contacts li:hover {
   background: #f0f5f5;
+  cursor: pointer;
 }
 
 .contacts li:visited {
@@ -155,15 +179,15 @@ body {
   margin-left: 20px;
 }
 
-.icons {
-  display: flex;
-  margin-right: 5px;
-}
-
 i {
   font-size: 17px;
   color: grey;
-  margin: 15px;
+  margin: 0px 15px 0px 15px;  
+}
+
+.icons {
+  display: flex;
+  margin-right: 5px;
 }
 
 .conversation-body {
