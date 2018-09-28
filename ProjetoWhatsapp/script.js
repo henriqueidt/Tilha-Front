@@ -6,8 +6,8 @@ const object = {
 }
 
 const object2 = {
-    name: "Henrique",
-    photo: 'https://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/durchschnittsgesichter/w(01-64)_gr.jpg',
+    name: "Trump",
+    photo: 'https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg',
     lastMessage: 'Hello my friend!!',
     time: '23:33'
 }
@@ -19,12 +19,26 @@ const object3 = {
     time: '13:20'
 }
 
-const users = [object, object2, object3]
+const object4 = {
+    name: "Dilma",
+    photo: 'https://pbs.twimg.com/profile_images/1030086754441879552/rwdaiqVE_400x400.jpg',
+    lastMessage: 'Oi. Quer estocar vento?',
+    time: '13:20'
+}
+
+const object5 = {
+    name: "Temer",
+    photo: 'https://pbs.twimg.com/profile_images/1015255524269535232/sSICnYpw_400x400.jpg',
+    lastMessage: 'Oi é o dracula',
+    time: '13:20'
+}
+
+const users = [object, object2, object3, object4, object5, object, object2, object3, object4, object5, object, object2, object3, object4, object5]
 
 const htmlFinal = users.map(function(user) {
     console.log(user)
     return ` 
-    <a href=""><li>
+    <li>
         <img class="contact-photo" src=${user.photo}>
         <section class="information">
             <div class="list-name-message">
@@ -32,10 +46,43 @@ const htmlFinal = users.map(function(user) {
                 <p class="list-message"><i class="fas fa-check-double"></i>${user.lastMessage}</p>
             </div>
         </section>
-        </li></a> 
+    </li> 
 `
 })
 
-// console.log(htmlFinal.join().split(",").join(""))
-
 document.querySelector('.contacts').innerHTML = htmlFinal.join("")
+
+const searchContact = document.forms['conversations-search-bar'].querySelector('.search-contact');
+
+function myFunction(){
+    var i, input, ul, li, input;
+    input = document.querySelector('.search-contact');
+    filter = input.value.toUpperCase();
+    ul = document.querySelector('.contacts');
+    li = ul.getElementsByTagName('li');
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName('p')[0];
+        if(a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+document.querySelector('.search-contact').addEventListener('keyup', function(e) {
+    var a, b;
+    ul = document.querySelector('.contacts');
+    li = ul.getElementsByTagName('li');
+    input = document.querySelector('.search-contact').value.toLowerCase();
+    for (i = 0; i < li.length; i++) {
+        a = li[i].querySelector('.name-time').querySelector('p').innerHTML.toLowerCase();
+        b = li[i].querySelector('.list-message').innerHTML.toLowerCase();
+        if(a.indexOf(input) > -1 || b.indexOf(input) > -1){
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+
+});
