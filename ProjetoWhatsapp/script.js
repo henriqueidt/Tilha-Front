@@ -76,14 +76,14 @@ document.querySelector('.contacts').innerHTML = conversations.join("")
 
 document.querySelector('.tab1-button').addEventListener('click', function(event) {
     document.querySelector('.contacts').innerHTML = numbers.join("")
-    document.querySelector('.tab1-button').style="background: #a2c3c3"
-    document.querySelector('.tab2-button').style="background: #e0ebeb"
+    document.querySelector('.tab1-button').classList.add("tab-selected")
+    document.querySelector('.tab2-button').classList.remove("tab-selected")
 })
 
 document.querySelector('.tab2-button').addEventListener('click', function(event) {
     document.querySelector('.contacts').innerHTML = conversations.join("")
-    document.querySelector('.tab2-button').style="background: #a2c3c3"
-    document.querySelector('.tab1-button').style="background: #e0ebeb"
+    document.querySelector('.tab2-button').classList.add("tab-selected")
+    document.querySelector('.tab1-button').classList.remove("tab-selected")
 })
 
 document.querySelector('.search-contact').addEventListener('keyup', function(e) {

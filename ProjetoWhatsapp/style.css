@@ -75,6 +75,10 @@ body {
   border: 1px solid #d0e1e1;
 }
 
+.tab-selected {
+  background: #a2c3c3;
+}
+
 #conversations-search-bar {
   height: 50px;
   background: white;
