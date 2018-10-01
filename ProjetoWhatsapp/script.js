@@ -54,9 +54,7 @@ const numbers = telephones.map(function(telephone) {
         </section>
     </li> 
     `
-})
-
-//document.querySelector('.contacts').innerHTML = htmlFInal2.join("")
+});
 
 const conversations = users.map(function(user) {
     return ` 
@@ -70,34 +68,38 @@ const conversations = users.map(function(user) {
         </section>
     </li> 
 `
-})
+});
 
-document.querySelector('.contacts').innerHTML = conversations.join("")
+var ul = document.querySelector('.contacts');
+var tab1 = document.querySelector('.tab1-button');
+var tab2 = document.querySelector('.tab2-button');
 
-document.querySelector('.tab1-button').addEventListener('click', function(event) {
-    document.querySelector('.contacts').innerHTML = numbers.join("")
-    document.querySelector('.tab1-button').classList.add("tab-selected")
-    document.querySelector('.tab2-button').classList.remove("tab-selected")
-})
+ul.innerHTML = conversations.join("");
 
-document.querySelector('.tab2-button').addEventListener('click', function(event) {
-    document.querySelector('.contacts').innerHTML = conversations.join("")
-    document.querySelector('.tab2-button').classList.add("tab-selected")
-    document.querySelector('.tab1-button').classList.remove("tab-selected")
-})
+tab1.addEventListener('click', function(event) {
+    ul.innerHTML = numbers.join("");
+    tab1.classList.add("tab-selected");
+    tab2.classList.remove("tab-selected");
+});
+
+tab2.addEventListener('click', function(event) {
+    ul.innerHTML = conversations.join("");
+    tab2.classList.add("tab-selected");
+    tab1.classList.remove("tab-selected");
+});
 
 document.querySelector('.search-contact').addEventListener('keyup', function(e) {
-    var name, text, i, input;
-    ul = document.querySelector('.contacts');
+    let name, text, input;
     li = ul.getElementsByTagName('li');
+    var liArray = Array.from(li);
     input = document.querySelector('.search-contact').value.toLowerCase();
-    for (i = 0; i < li.length; i++) {
-        name = li[i].querySelector('.name-time').querySelector('p').innerHTML.toLowerCase();
-        text = li[i].querySelector('.list-message').innerHTML.toLowerCase();
+    liArray.forEach (function(item) {
+        name = item.querySelector('.name-time').querySelector('p').innerHTML.toLowerCase();
+        text = item.querySelector('.list-message').innerHTML.toLowerCase();
         if(name.indexOf(input) > -1 || text.indexOf(input) > -1){
-            li[i].style.display = "";
+            item.style.display = "";
         } else {
-            li[i].style.display = "none";
+            item.style.display = "none";
         }
-    }
+    });
 });
